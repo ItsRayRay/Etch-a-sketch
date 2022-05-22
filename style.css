@@ -10,11 +10,15 @@ body{
     flex-direction: column;
 }
 
-#container {
+#container__content {
     max-width: 600px;
-    width: 100%;
+    width: 600px;
     margin: 0 auto;
     margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .secondary__container {
@@ -37,12 +41,16 @@ header {
     
     #border-grid {
         border: 3px solid black;
-        padding-bottom: 500px;
         margin-top: 30px;
-
+        min-height: 500px;
+        max-height: 500px;
+        min-width: 500px;
+        max-width: 500px;
     }
-
 
     footer{
         margin-top: auto;
     }
+
+
+
