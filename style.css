@@ -1,15 +1,18 @@
 
-
-body {
-    
-    
+header {
+    padding: 2em
+  
 }
 
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
 #container {
     max-width: 600px;
     width: 100%;
-    
     margin: 0 auto;
     margin-bottom: 50px;
 }
@@ -17,8 +20,8 @@ body {
 .secondary__container {
     max-width: 900px;
     width: 100%;
-    
     margin: 0 auto;
+    margin-bottom:50px;
 }
 
 header {
@@ -28,17 +31,6 @@ header {
     justify-content: center;
     
 }
-
-.parent {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 100%;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    margin: 0;
-    }
-    
-    .div1 { grid-area: 1 / 1 / 2 / 2; }
 
 
 
@@ -51,7 +43,6 @@ header {
     }
 
 
-    footer {
-        margin-top: 10vh;
-        max-width: 100%;
+    footer{
+        margin-top: auto;
     }
