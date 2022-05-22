@@ -4,11 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etch-a-sketch</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Etch-A-Sketch</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+
+    <style>
+        html, body, pre, code, kbd, samp h1 {
+            font-family: 'Press Start 2P', cursive;
+        }
+      </style>
+      <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
-</body>
-<script src="etchasketch.js"></script>
+<header><h1>Etch-A-Sketch</h1></header>
 
+
+<div id="container">
+
+
+
+    <div class="nes-container with-title is-centered">
+        <p class="title"></p>
+        <div id="border-grid">
+
+
+          <div class="parent">
+            <div class="div1"> </div>
+            </div>
+        
+
+
+        </div>
+      </div>
+
+
+
+
+    <div class="nes-container with-title is-centered">
+        <p class="title"><span class="nes-text is-primary"><p></p></span></p>
+        <p>Get creative!</p>
+
+
+        <input type="color" id="head" name="head"
+        value="#e66465">
+ <label for="head">color</label>
+ <div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange"> <p>16x16</p>
+  </div>
+        <button type="button" class="nes-btn is-primary">COLOR MODE</button>
+    
+        <button type="button" class="nes-btn is-success">RAINBOW MODE</button>
+    
+        <button type="button" class="nes-btn is-warning">ERASER</button>
+        <button type="button" class="nes-btn is-error">CLEAR</button>
+
+        
+   
+
+      </div>
+      
+
+      <div class="nes-container with-title is-centered">
+        <p class="title"></p>
+        <p>Copyright © 2022 RayRay <i class="nes-icon github is-medium"></i></p>
+      </div>
+
+
+    </div>
+    
+
+
+  
+</body>
 </html>

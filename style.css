@@ -1,0 +1,46 @@
+* {
+    margin-bottom: 3px;
+    
+}
+
+body {
+    background-color: lightgray;
+    
+}
+
+
+#container {
+    max-width: 800px;
+    width: 100%;
+    
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 0;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+
+
+
+    
+    #border-grid {
+        border: 3px solid black;
+        padding-bottom: 500px;
+        margin-top: 30px;
+
+    }
