@@ -17,61 +17,43 @@
 
 </head>
 <body>
-<header><h1>Etch-A-Sketch</h1></header>
 
+
+<!--Contains the sketchpad -->
 
 <div id="container__content">
-
-
-
     <div class="nes-container with-title is-centered">
-        <p class="title"></p>
-        <div id="border-grid">
-          <div id="container">
-          </div>
-
-          <div class="parent">
-            <div class="div1"> </div>
-            </div>
-        
-
-
-        </div>
-      </div>
-
-
-
-
-
-      
-
-
-
+        <p class="title">Etch-A-Sketch</p>
+          <div id="container">  <!--contains the grid-->  </div>
     </div>
+</div>
     
+
+<!--contains the controller-->
+
 <div class="secondary__container">
 
     <div class="nes-container with-title is-centered">
       <p class="title">Get Creative!<span class="nes-text is-primary"><p></p></span></p>
-   
-
+      
+      
       <input type="color" id="head" name="head"
-      value="#e66465">
+      value="#e66465">                            <!--Colorpicker-->
       <label for="head">color</label>
+
+
       <div class="slidecontainer">
-      <input type="range" min="1" max="100" value="50" class="slider" id="myRange"> <p>16x16</p>
+      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">   <!--slider-->
+      <p>16x16</p>
+
+
+
       </div>
       <button type="button" class="nes-btn is-primary">COLOR MODE</button>
-  
       <button type="button" class="nes-btn is-success">RAINBOW MODE</button>
-  
       <button type="button" class="nes-btn is-warning">ERASER</button>
       <button type="button" class="nes-btn is-error">CLEAR</button>
-
-      
- 
-
-    </div>
+      </div>
     
 
   </div>
@@ -84,8 +66,5 @@
   </footer>
 
 </body>
-
-
-
 
 <script src="script.js"></script>
