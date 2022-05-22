@@ -1,16 +1,21 @@
-* {
-    margin-bottom: 3px;
-    
-}
+
 
 body {
-    background-color: lightgray;
+    
     
 }
 
 
 #container {
-    max-width: 800px;
+    max-width: 600px;
+    width: 100%;
+    
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.secondary__container {
+    max-width: 900px;
     width: 100%;
     
     margin: 0 auto;
@@ -43,4 +48,10 @@ header {
         padding-bottom: 500px;
         margin-top: 30px;
 
+    }
+
+
+    footer {
+        margin-top: 10vh;
+        max-width: 100%;
     }
