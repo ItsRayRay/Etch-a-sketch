@@ -1,7 +1,16 @@
+
 const container = document.getElementById("container");
 const slider = document.getElementById("myRange")
 const output = document.getElementById("value")
 
+
+let rainbowColors = ["red","orange","yellow","green","blue","indigo","violet"]
+
+function randomColor(min) {
+  return min[Math.floor(Math.random() * min.length)];     // generates a random number that picks the (string) hand within the array
+  }              
+  
+ 
 
 //===================================================//
 //                  Buttons
@@ -12,7 +21,7 @@ const rainBowMode = document.getElementById("rainbowmode")
 const eraserButton = document.getElementById("eraserbutton")
 const clearButton = document.getElementById("clearbutton")
 
-let valueGrid = 36
+let valueGrid = 32
 
 
 //===================================================//
@@ -39,20 +48,18 @@ function makeRows(rows, cols) {
 
 
 
+// case switch functie maken voor rainbow, color picker, en eraser 
+// moet ervoor zorgen als onclick button functie overschakelt naar true en dan de case uitkiest
+
+
 
   const changeBackgroundColor = e => {
-   e.target.style.backgroundColor = "green";
+   e.target.style.backgroundColor =  randomColor(rainbowColors);
    }
+
   gridSquares.forEach(div => {
    div.addEventListener("click", changeBackgroundColor, {once: true});
   })
-
-
-
-
-
-
-
 
 
 
@@ -77,10 +84,3 @@ slider.oninput = function() {
  
 
 makeRows(valueGrid, valueGrid)
-
-
-
-
-
-
-
