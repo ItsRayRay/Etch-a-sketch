@@ -7,7 +7,7 @@ const output = document.getElementById("value")
 let rainbowColors = ["red","orange","yellow","green","blue","indigo","violet"]
 
 function randomColor(min) {
-  return min[Math.floor(Math.random() * min.length)];     // generates a random number that picks the (string) hand within the array
+  return min[Math.floor(Math.random() * min.length)];     // generates a random number that picks the (string) hand within the array 
   }              
   
  
@@ -21,7 +21,10 @@ const rainBowMode = document.getElementById("rainbowmode")
 const eraserButton = document.getElementById("eraserbutton")
 const clearButton = document.getElementById("clearbutton")
 
-let valueGrid = 32
+
+//===================================================//
+//        reloads the page when pressing clear button
+//===================================================//
 
 
 //===================================================//
@@ -40,7 +43,7 @@ function makeRows(rows, cols) {
   };
 
 //===================================================//
-//    eventlistener to change the color of the squares
+//    event listener to change the color of the squares
 //===================================================//
  
 
@@ -48,19 +51,55 @@ function makeRows(rows, cols) {
 
 
 
-// case switch functie maken voor rainbow, color picker, en eraser 
-// moet ervoor zorgen als onclick button functie overschakelt naar true en dan de case uitkiest
 
-
-
+colorMode.addEventListener("click", function () {
+  
   const changeBackgroundColor = e => {
-   e.target.style.backgroundColor =  randomColor(rainbowColors);
-   }
+    e.target.style.backgroundColor =  "black";
+    }
+ 
+   gridSquares.forEach(div => {
+    div.addEventListener("click", changeBackgroundColor, {once: true});
+ 
+} )
 
-  gridSquares.forEach(div => {
-   div.addEventListener("click", changeBackgroundColor, {once: true});
   })
 
+
+  rainBowMode.addEventListener("click", function () {
+  
+    const changeBackgroundColor = e => {
+      e.target.style.backgroundColor =  randomColor(rainbowColors);
+      }
+   
+   
+     gridSquares.forEach(div => {
+      div.addEventListener("click", changeBackgroundColor, {once: true});
+   
+  } )
+  
+    })
+  
+  
+    eraserButton.addEventListener("click", function () {
+  
+      const changeBackgroundColor = e => {
+        e.target.style.backgroundColor =  "white";
+        }
+     
+     
+       gridSquares.forEach(div => {
+        div.addEventListener("click", changeBackgroundColor, {once: true});
+     
+    } )
+    
+      })
+
+
+      clearButton.addEventListener("click", function () {
+        location.reload()
+      } )
+      
 
 
 };
@@ -71,16 +110,22 @@ function makeRows(rows, cols) {
  
 
 output.innerHTML = slider.value
-slider.oninput = function() {
+
+slider.oninput =  function () {
 
   output.innerHTML = this.value +" x "+ this.value
-
-  valueGrid = this.value
-
-  return valueGrid
-
   
-}
- 
 
-makeRows(valueGrid, valueGrid)
+  let sliderValue = document.getElementById("myRange").value
+    
+
+return sliderValue
+    
+  }
+  
+
+
+
+
+  makeRows(16, 16)
+
