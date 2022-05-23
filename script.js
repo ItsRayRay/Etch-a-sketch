@@ -1,8 +1,7 @@
-
 const container = document.getElementById("container");
 const slider = document.getElementById("myRange")
 const output = document.getElementById("value")
-
+const colorInput ="red"
 
 let rainbowColors = ["red","orange","yellow","green","blue","indigo","violet"]
 
@@ -55,7 +54,9 @@ function makeRows(rows, cols) {
 colorMode.addEventListener("click", function () {
   
   const changeBackgroundColor = e => {
-    e.target.style.backgroundColor =  "black";
+
+    let color = document.getElementById('colorInputColor').value
+    e.target.style.backgroundColor =  color;
     }
  
    gridSquares.forEach(div => {
@@ -111,21 +112,14 @@ colorMode.addEventListener("click", function () {
 
 output.innerHTML = slider.value
 
+
 slider.oninput =  function () {
 
   output.innerHTML = this.value +" x "+ this.value
   
-
-  let sliderValue = document.getElementById("myRange").value
-    
-
-return sliderValue
-    
   }
   
 
 
 
-
-  makeRows(16, 16)
-
+  makeRows(32, 32)      // <--------- input a variable that gets the this.value from the function above (slider code), 
