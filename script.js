@@ -112,11 +112,11 @@ colorMode.addEventListener("click", function () {
  
 
 
-output.innerText = input.value 
+output.innerText = input.value + 'x' + input.value
 
 input.addEventListener("input", function (){
 
- output.innerText = input.value 
+ output.innerText = input.value + 'x' + input.value
 
  container.textContent = ""
 
@@ -126,4 +126,3 @@ makeRows(input.value, input.value)
 
 
 
- // <--------- input a variable that gets the input.value from the function above (slider code), 
