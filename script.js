@@ -1,7 +1,8 @@
 const container = document.getElementById("container");
-const slider = document.getElementById("myRange")
+const input = document.getElementById("myRange")
 const output = document.getElementById("value")
 const colorInput ="red"
+let outputRange = 0
 
 let rainbowColors = ["red","orange","yellow","green","blue","indigo","violet"]
 
@@ -110,16 +111,19 @@ colorMode.addEventListener("click", function () {
 //===================================================//
  
 
-output.innerHTML = slider.value
+
+output.innerText = input.value 
+
+input.addEventListener("input", function (){
+
+ output.innerText = input.value 
+
+ container.textContent = ""
+
+makeRows(input.value, input.value)  
+
+})
 
 
-slider.oninput =  function () {
 
-  output.innerHTML = this.value +" x "+ this.value
-  
-  }
-  
-
-
-
-  makeRows(32, 32)      // <--------- input a variable that gets the this.value from the function above (slider code), 
+ // <--------- input a variable that gets the input.value from the function above (slider code), 
